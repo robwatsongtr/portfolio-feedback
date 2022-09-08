@@ -7,11 +7,6 @@ import {
   Storefront,
   AttachMoney,
   BarChart,
-  MailOutline,
-  DynamicFeed,
-  ChatBubbleOutline,
-  WorkOutline,
-  Report,
 } from "@material-ui/icons";
 
 
@@ -32,11 +27,11 @@ export default function Sidebar() {
                 
                 <li className="sidebarListItem">
                   <Timeline className="sidebarIcon" />
-                  Analytics
+                  This 
                 </li>
                 <li className="sidebarListItem">
                   <TrendingUp className="sidebarIcon" />
-                  Sales
+                  That
                 </li>
               </ul>
             </div>
@@ -47,22 +42,22 @@ export default function Sidebar() {
                 
                   <li className="sidebarListItem">
                     <PermIdentity className="sidebarIcon" />
-                    Users
+                    This 
                   </li>
                 
                 
                   <li className="sidebarListItem">
                     <Storefront className="sidebarIcon" />
-                    Products
+                    That
                   </li>
                 
                 <li className="sidebarListItem">
                   <AttachMoney className="sidebarIcon" />
-                  Transactions
+                  Something
                 </li>
                 <li className="sidebarListItem">
                   <BarChart className="sidebarIcon" />
-                  Reports
+                  Else
                 </li>
               </ul>
             </div>

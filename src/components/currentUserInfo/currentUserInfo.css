@@ -1,0 +1,57 @@
+.currentUser {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* 
+Note, go to html-css-js.com/css/generator/box-shadow
+It generates custom css box shadows, as shown below 
+*/
+.currentUserItem {
+  flex: 1;
+  margin: 0px 20px;
+  padding: 30px;
+  
+  cursor: pointer;
+  
+  
+}
+
+.currentUserTitle{
+  font-size: 20px;
+}
+
+.currentUserContainer{
+  margin: 10px 0px;
+  display: flex;
+  align-items: center;
+}
+
+.currentUserValue{
+  font-size: 30px;
+  font-weight: 600;
+}
+
+/*
+.featuredMoneyRate{
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.featuredIcon{
+  font-size: 14px;
+  margin-left: 5px;
+  color: green;
+}
+
+.featuredIcon.negative{
+  color: red;
+}
+
+.featuredSub{
+  font-size: 15px;
+  color: gray;
+}
+*/
