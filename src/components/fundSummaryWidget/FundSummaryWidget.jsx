@@ -4,47 +4,80 @@ import { DataGrid } from '@material-ui/data-grid';
 const columns = [
   { field: 'id', headerName: 'ID', width: 90 },
   {
-    field: 'firstName',
-    headerName: 'First name',
+    field: 'fundName',
+    headerName: 'Fund Name',
     width: 150,
     editable: true,
   },
   {
-    field: 'lastName',
-    headerName: 'Last name',
+    field: 'submittedPortfolio',
+    headerName: 'Submitted Portfolio',
+    width: 200,
+    editable: true,
+  },
+  {
+    field: 'recommendedPortfolio',
+    headerName: 'Recommended Portfolio',
+    width: 250,
+    editable: true,
+  },
+  {
+    field: 'difference',
+    headerName: 'Difference',
     width: 150,
     editable: true,
   },
   {
-    field: 'age',
-    headerName: 'Age',
-    type: 'number',
-    width: 110,
+    field: 'feedback',
+    headerName: 'Feedback',
+    width: 120,
     editable: true,
   },
   {
-    field: 'fullName',
-    headerName: 'Full name',
-    description: 'This column has a value getter and is not sortable.',
-    sortable: false,
-    width: 160,
-    valueGetter: (params) =>
-      `${params.getValue(params.id, 'firstName') || ''} ${
-        params.getValue(params.id, 'lastName') || ''
-      }`,
+    field: 'suggestions',
+    headerName: 'Suggestions',
+    width: 250,
+    editable: true,
   },
 ];
 
 const rows = [
-  { id: 1, lastName: 'Snow', firstName: 'Jon', age: 35 },
-  { id: 2, lastName: 'Lannister', firstName: 'Cersei', age: 42 },
-  { id: 3, lastName: 'Lannister', firstName: 'Jaime', age: 45 },
-  { id: 4, lastName: 'Stark', firstName: 'Arya', age: 16 },
-  { id: 5, lastName: 'Targaryen', firstName: 'Daenerys', age: null },
-  { id: 6, lastName: 'Melisandre', firstName: null, age: 150 },
-  { id: 7, lastName: 'Clifford', firstName: 'Ferrara', age: 44 },
-  { id: 8, lastName: 'Frances', firstName: 'Rossini', age: 36 },
-  { id: 9, lastName: 'Roxie', firstName: 'Harvey', age: 65 },
+  { 
+    id: 1, 
+    fundName: 'JP Morgan 444', 
+    submittedPortfolio: '10%', 
+    difference: '-1',
+    recommendedPortfolio: '9%',
+    feedback: 'true',
+    suggestions: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+  },
+  { 
+    id: 2, 
+    fundName: 'JP Morgan 4744', 
+    submittedPortfolio: '20%', 
+    difference: '9',
+    recommendedPortfolio: '29%',
+    feedback: 'true',
+    suggestions: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+  },
+  { 
+    id: 3, 
+    fundName: 'JP Morgan 4445', 
+    submittedPortfolio: '30%', 
+    difference: '9',
+    recommendedPortfolio: '39%',
+    feedback: 'true',
+    suggestions: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+  },
+  { 
+    id: 4, 
+    fundName: 'JP Morgan 478', 
+    submittedPortfolio: '0%', 
+    difference: '30',
+    recommendedPortfolio: '30%',
+    feedback: 'true',
+    suggestions: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+  },
 ];
 
 
@@ -52,10 +85,10 @@ export default function FundSummaryList() {
   return (
     <div className="fundSummaryWidget">
 
-      <h3 className="fundSummaryWidgetTitle">
-        Fund Summary Datagrid 
+     <h3 className="fundSummaryWidgetTitle">
+        Fund Summary 
       </h3>
-
+ 
       <div className="dataTable">
         <div style={{ height: 400, width: '100%' }}>
           <DataGrid
