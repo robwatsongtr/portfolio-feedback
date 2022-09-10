@@ -9,3 +9,19 @@
   font-size: 22px;
   font-weight: 600;
 }
+
+.widgetLgTable {
+  width: 100%;
+  border-spacing: 25px;
+  
+}
+
+
+
+.widgetLgTh {
+  text-align: left;
+}
+
+.widgetLgSubmittedPortfolio, .widgetLgRecommendedPortfolio, .widgetLgDifference {
+  font-weight: 400;
+}
