@@ -4,11 +4,12 @@ import { ArrowDownward, ArrowUpward } from "@material-ui/icons"
 export default function WidgetLg() {
   return (
     <div className="widgetLg">
+
       <h3 className="widgetLgTitle">
         Fund Summary
       </h3>
-      <table className="widgetLgTable">
 
+      <table className="widgetLgTable">
         <tr className="widgetLgTr">
           <th className="widgetLgTh">Fund Name</th>
           <th className="widgetLgTh">Submitted Portfolio</th>
@@ -17,6 +18,7 @@ export default function WidgetLg() {
           <th className="widgetLgTh">Feedback</th>
           <th className="widgetLgTh">Suggestions</th>
         </tr>
+        
         <tr className="widgetLgTr">
           <td className="widgetLgFund">
             <span className="widgetLgFundName">JP Morgan 444</span>
@@ -65,8 +67,8 @@ export default function WidgetLg() {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
           </td>
         </tr>
-
       </table>
+      
     </div>
   )
 }
