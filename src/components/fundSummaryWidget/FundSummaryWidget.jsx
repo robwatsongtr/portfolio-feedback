@@ -2,7 +2,7 @@ import "./fundSummaryWidget.css"
 import { DataGrid } from '@material-ui/data-grid';
 
 const columns = [
-  { field: 'id', headerName: 'ID', width: 90 },
+  { field: 'id', headerName: 'ID', width: 90, hide: true },
   {
     field: 'fundName',
     headerName: 'Fund Name',
@@ -94,8 +94,8 @@ export default function FundSummaryList() {
           <DataGrid
             rows={rows}
             columns={columns}
-            pageSize={5}
-            checkboxSelection
+            pageSize={4}
+            
             disableSelectionOnClick
           />
         </div>
