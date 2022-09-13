@@ -10,7 +10,6 @@ export default function Home() {
       <CurrentUserInfo />
       <FeaturedInfo />
       <div className="homeWidgets">
-        
         <FundSummaryWidget />
       </div>
     </div>
