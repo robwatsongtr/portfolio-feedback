@@ -6,38 +6,42 @@ const columns = [
   {
     field: 'fundName',
     headerName: 'Fund Name',
-    width: 150,
-    editable: true,
+    width: 180,
+    editable: false,
   },
   {
     field: 'submittedPortfolio',
-    headerName: 'Submitted Portfolio',
-    width: 200,
-    editable: true,
+    headerName: 'Submitted',
+    width: 140,
+    align: 'right',
+    editable: false,
   },
   {
     field: 'recommendedPortfolio',
-    headerName: 'Recommended Portfolio',
-    width: 250,
-    editable: true,
+    headerName: 'Recommended',
+    width: 170,
+    align: 'right',
+    editable: false,
   },
   {
     field: 'difference',
     headerName: 'Difference',
     width: 150,
-    editable: true,
+    align: 'right',
+    editable: false,
   },
   {
     field: 'feedback',
     headerName: 'Feedback',
-    width: 120,
-    editable: true,
+    width: 150,
+    align: 'center',
+    editable: false,
   },
   {
     field: 'suggestions',
     headerName: 'Suggestions',
     width: 250,
-    editable: true,
+    editable: false,
   },
 ];
 
@@ -94,7 +98,6 @@ export default function FundSummaryList() {
           <DataGrid
             rows={rows}
             columns={columns}
-            pageSize={4}
             
             disableSelectionOnClick
           />
