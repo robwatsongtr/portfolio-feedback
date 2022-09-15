@@ -35,7 +35,7 @@ const columns = [
   {
     field: 'difference',
     headerName: 'Difference',
-    width: 150,
+    width: 140,
     align: 'right',
     editable: false,
   },
@@ -56,7 +56,7 @@ const columns = [
   {
     field: 'suggestions',
     headerName: 'Suggestions',
-    width: 400,
+    width: 800,
     renderCell: (params) => {
       return  <> <OpenInNewIcon /> {params.row.suggestions} </> 
     },
