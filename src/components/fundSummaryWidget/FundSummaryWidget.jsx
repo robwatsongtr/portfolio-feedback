@@ -1,7 +1,6 @@
 import "./fundSummaryWidget.css"
 import { DataGrid } from '@material-ui/data-grid';
-// import { makeStyles } from '@material-ui/styles';
-
+import { makeStyles } from '@material-ui/styles';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import ThumbUpOffAltIcon from '@mui/icons-material/ThumbUpOffAlt';
 import ThumbDownOffAltIcon from '@mui/icons-material/ThumbDownOffAlt';
@@ -14,6 +13,7 @@ const columns = [
     hide: true },
   {
     field: 'fundName',
+    headerClassName: '.super-app-theme--header',
     headerName: 'Fund Name',
     width: 220,
     editable: false,
@@ -56,11 +56,8 @@ const columns = [
   {
     field: 'suggestions',
     headerName: 'Suggestions',
-    width: 800,
-    renderCell: (params) => {
-      return  <> <OpenInNewIcon /> {params.row.suggestions} </> 
-    },
-    editable: false,
+    width: 600,
+    editable: true,
   },
 ];
 
@@ -75,11 +72,7 @@ const rows = [
     suggestions: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
       eiusmod tempor incididunt ut labore et dolore magna aliqua. 
       Ut enim ad minim veniam, quis nostrud exercitation ullamco 
-      laboris nisi ut aliquip ex ea commodo consequat. 
-      Duis aute irure dolor in reprehenderit in voluptate velit esse 
-      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat 
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit 
-      anim id est laborum.`
+      laboris nisi ut aliquip ex ea commodo consequat.`
   },
   { 
     id: 2, 
@@ -88,7 +81,10 @@ const rows = [
     difference: '9',
     recommendedPortfolio: '29%',
     feedback: 'false',
-    suggestions: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+    suggestions: `Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+      laboris nisi ut aliquip ex ea commodo consequat. 
+      Duis aute irure dolor in reprehenderit in voluptate velit esse 
+      cillum dolore eu fugiat nulla pariatur.`
   },
   { 
     id: 3, 
@@ -144,33 +140,7 @@ const rows = [
     feedback: 'false',
     suggestions: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
   },
-  { 
-    id: 9, 
-    fundName: 'JP Morgan 478', 
-    submittedPortfolio: '0%', 
-    difference: '30',
-    recommendedPortfolio: '30%',
-    feedback: 'false',
-    suggestions: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-  },
-  { 
-    id: 10, 
-    fundName: 'JP Morgan 478', 
-    submittedPortfolio: '0%', 
-    difference: '30',
-    recommendedPortfolio: '30%',
-    feedback: 'false',
-    suggestions: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-  },
-  { 
-    id: 11, 
-    fundName: 'JP Morgan 478', 
-    submittedPortfolio: '0%', 
-    difference: '30',
-    recommendedPortfolio: '30%',
-    feedback: 'false',
-    suggestions: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-  },
+ 
 
 ];
 
@@ -182,18 +152,24 @@ const rows = [
 //   },
 // });
 
-
+const useStyles = makeStyles({
+  root: {
+    '& .super-app-theme--header': {
+      backgroundColor: 'rgba(255, 7, 0, 0.55)',
+    },
+  },
+});
 
 export default function FundSummaryList() {
+  const classes = useStyles()
+
   return (
     <div className="fundSummaryWidget">
-
      <h3 className="fundSummaryWidgetTitle">
         Fund Summary 
       </h3>
- 
       <div className="dataTable">
-        <div style={{ height: 800, width: '100%' }}>
+        <div style={{ height: 800, width: '100%' }} className={classes.root}>
           <DataGrid
             rows={rows}
             columns={columns}
@@ -201,7 +177,22 @@ export default function FundSummaryList() {
           />
         </div>
       </div>
-
     </div>
   )
 }
+
+
+
+/*
+
+renderCell: (params) => {
+      return  (
+        <div> 
+          <OpenInNewIcon fontSize="small" /> 
+            {params.row.suggestions} 
+        </div> 
+      )
+    },
+
+
+*/
