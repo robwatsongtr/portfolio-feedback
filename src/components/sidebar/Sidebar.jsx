@@ -44,8 +44,6 @@ export default function Sidebar() {
                     <PermIdentity className="sidebarIcon" />
                     This 
                   </li>
-                
-                
                   <li className="sidebarListItem">
                     <Storefront className="sidebarIcon" />
                     That

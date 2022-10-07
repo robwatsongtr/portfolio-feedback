@@ -56,7 +56,7 @@ const columns = [
   {
     field: 'suggestions',
     headerName: 'Suggestions',
-    width: 600,
+    width: 350,
     editable: true,
   },
 ];
